@@ -97,7 +97,7 @@ with tab1:
         fig1.update_layout(margin={"r":0, "t":0, "l":0, "b":0})
         fig1.update_layout(title={"text": "Mean electrical capacity (MW)", "x": 0.15, "y":0.95, "xanchor": "center","yanchor": "top"})
         st.write(
-            ""  # data description
+            "Mean electrical capacity was highest in the canton of Uri."  # data description
         )
     st.header(tab_names[0])
     st.plotly_chart(fig1)   
@@ -131,7 +131,10 @@ with tab3:
         fig3.update_layout(mapbox_style="carto-positron", mapbox_zoom=6.5, 
                   mapbox_center = {"lat": lat, "lon": lon})
         fig3.update_layout(margin={"r":0, "t":0, "l":0, "b":0})
-        fig3.update_layout(title={"text": "Total production (MWh)", "x": 0.15, "y":0.95, "xanchor": "center","yanchor": "top"}) 
+        fig3.update_layout(title={"text": "Total production (MWh)", "x": 0.15, "y":0.95, "xanchor": "center","yanchor": "top"})
+        st.write(
+            "The total energy production is dominated by the three cantons with the highest electrical capacity. "
+            ) 
     else:
         fig3 = go.Figure(go.Choroplethmapbox(geojson=swiss_geojson, locations=swiss_energy.canton_name, 
                 z=swiss_energy['mean_production'], featureidkey="properties.kan_name", colorscale=colorbar, 
@@ -141,15 +144,15 @@ with tab3:
                   mapbox_center = {"lat": lat, "lon": lon})
         fig3.update_layout(margin={"r":0, "t":0, "l":0, "b":0})
         fig3.update_layout(title={"text": "Mean production (MWh)", "x": 0.15, "y":0.95, "xanchor": "center","yanchor": "top"})
+        st.write(
+        "The canton of Uri has the highest mean production. Their very low number of facility (n=64) is noteworthy for such a high level of mean production. Most Swiss cantons have mean production of less than 200 MWh."
+        )
     # col1, col2 = st.columns(2)
     # if col1.button("Total", key="tab3_total"):
     #     st.write("Total")
     # if col2.button("Mean", key="tab3_mean")
     st.header(tab_names[2])
     st.plotly_chart(fig3)
-    st.write(
-        ""  # data description
-    )
 
 with tab4:
     st.write("The number of renewable facilities in each canton .")
@@ -162,15 +165,16 @@ with tab4:
                     mapbox_center = {"lat": lat, "lon": lon})
     fig4.update_layout(margin={"r":0, "t":0, "l":0, "b":0})
     fig4.update_layout(title={"text": "Facility count (nos)", "x": 0.15, "y":0.95, "xanchor": "center","yanchor": "top"}) 
+    st.write(
+        "The canton of Bern has the highest number of renewable facilities in Switzerland as of 2020. The other two large cantons, Valais and Graubünden, despite of their high electrical capacity, they have much lower number of facilities. "  # data description
+    )
     st.header(tab_names[3])
     st.plotly_chart(fig4)
-    st.write(
-        ""  # data description
-    )
+
 
 
 with tab5:          # production efficiency
-    st.write("The number of renewable facilities in each canton.")
+    st.write("Production efficiency is obtained by total energy production divided by total electrical capacity.")
     # plot
     fig5 = go.Figure(go.Choroplethmapbox(geojson=swiss_geojson, locations=swiss_energy.canton_name, 
                 z=swiss_energy['Prod_eff'], featureidkey="properties.kan_name", colorscale=colorbar, 
@@ -180,8 +184,8 @@ with tab5:          # production efficiency
                     mapbox_center = {"lat": lat, "lon": lon})
     fig5.update_layout(margin={"r":0, "t":0, "l":0, "b":0})
     fig5.update_layout(title={"text": "Production efficiency (MW/MWh)", "x": 0.15, "y":0.95, "xanchor": "center","yanchor": "top"}) 
+    st.write(
+        "The canton of Glarus resulted in the greatest level of efficiency in energy production among other Swiss cantons."  # data description
+    )
     st.header(tab_names[4])
     st.plotly_chart(fig5)
-    st.write(
-        ""  # data description
-    )
