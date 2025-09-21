@@ -81,7 +81,7 @@ if selected == sidebar_items[0]:
     st.header("Clean Energy App 🫧🇨🇭")
     # st.subheader("Overview")
     st.write(
-        "This is a interactive web app (API) to helps users explore, analyze, and visualize clean energy scenarios in Switzerland. It provides interactive tools and data-driven insights to inform decisions related to the production of energy at district levels, energy cost for local households, and sustainable practices."
+        "This is a interactive web app (API) to help users explore, analyze, and visualize clean energy scenarios in Switzerland. It provides interactive tools and data-driven insights to inform decisions related to the production of energy at district levels, energy cost for local households, and sustainable practices."
     )
     st.subheader("Data Visualization")
     st.write(
