@@ -22,6 +22,14 @@ from copy import deepcopy
 import json
 from streamlit_option_menu import option_menu
 
+# --- Set page config ---
+st.set_page_config(
+    # page_title="My App",
+    # page_icon="🌿",
+    layout="wide",  # <-- sets wide mode
+    initial_sidebar_state="expanded"
+)
+
 
 sidebar_items = ["Overview", "Data Vis", "Model"]
 
