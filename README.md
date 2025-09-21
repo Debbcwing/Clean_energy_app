@@ -14,7 +14,7 @@ A brief geographical summary on clean energy generation in Switzerland among the
 <br>
 
 **A simple model for the energy flexibility**<br><br>
-A simple conceptual model that targets at single households to showcase the basic mechanism of local energy markets in Switzerland, and also shares what kinds of flexibility products houehold have. The model aims at find an optimal flexibility product based on market information and forecasts (**not applied yet**) to facilitate households' decision-making process. 
+To achieve climate neutrality by 2050, the Energy Transition in Switzerland🇨🇭 faces multiple challenges and opportunities. Here, a simple conceptual model shows the basic mechanism of local energy markets in Switzerland, and also shares what kinds of flexibility products the local houeholds have to maximum their profit. The model aims at find an optimal flexibility product based on market information and forecasts (**not applied yet**) to facilitate households' decision-making process. 
 
 <br>
 
