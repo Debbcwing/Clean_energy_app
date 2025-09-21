@@ -2,7 +2,7 @@
 https://clean-energy-app.streamlit.app/
 ### Overview
 
-This is a interactive web app (API) to helps users explore, analyze, and visualize clean energy scenarios in Switzerland. It provides interactive tools and data-driven insights to inform decisions related to renewable energy, energy cost for local households, and sustainable practices.
+This is a interactive web app (API) to helps users explore, analyze, and visualize clean energy scenarios in Switzerland. It provides interactive tools and data-driven insights to inform decisions related to the production of clean energy at district level, energy cost for local households, and sustainable practices.
 <br><br>
 **Data visualization**<br>
 A brief geographical summary on clean energy generation in Switzerland among the 26 Cantons including the below information:
