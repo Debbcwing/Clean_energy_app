@@ -65,14 +65,14 @@ with st.sidebar:
 # st.sidebar.title("Navigation")
 # page = st.radio("Go to", ["Home", "Analysis", "Settings"])
 
-# selection tab on top
-# page = st.selectbox("Go to", ["Home", "Analysis", "Settings"])
-
 # selection tab (duplicated with pages -> drop)
 # tab1, tab2, tab3 = st.tabs(["Home", "Analysis", "Settings"])
 
-# without sidebar
+# without sidebar------
 # page = st.segmented_control("Navigation", ["Home", "Analysis", "Settings"])
+
+# selection tab on top
+# page = st.selectbox("Go to", ["Home", "Analysis", "Settings"])
 
 
 
@@ -305,12 +305,21 @@ elif selected == sidebar_items[2]:
         # st.subheader("Background")
         st.write(
             "Unlike larger European countries, Switzerland’s grid is heavily interconnected with neighbours but has limited domestic storage capacity. "
-            "The rise of Photovoltaic (PV) adaptation of household in Switzerland allow them to become not only energy consumers but also producers (hence known as prosumers)."
+            "The rise of Photovoltaic (PV) production by households in Switzerland[1] allow them to become not only energy consumers but also producers (hence known as prosumers)."
         )
         st.write(
             "By offering flexibility, households and businesses can adjust their electricity consumption or generation in response to the market signals. Managing these flexibility products not only stabilize the power grid but also reduce energy costs. "
-            "By connecting households, markets, and technology, Switzerland can unlock significant grid stability and decarbonisation benefits while empowering consumers to become active energy participants."
+            "By connecting households, markets, and technology, Switzerland can unlock significant grid stability and decarbonisation benefits while empowering consumers to become active energy participants[2]."
         )
+        with st.expander("📚 References"):
+            st.markdown(
+                """
+                [1] [Swiss Federal Office of Energy](https://energiedashboard.admin.ch/strom/produktion-pv) 
+                [2] [Switzerland expands rules for rooftop solar, storage, energy communities](https://www.pv-magazine.com/2025/02/24/switzerland-expands-rules-for-rooftop-solar-storage-energy-communities/)
+                """
+                )
+
+
     with tab2:              # Flexibility products
         st.subheader("Flexibility products/strategies")
         st.write(
@@ -333,7 +342,9 @@ elif selected == sidebar_items[2]:
         st.write(
             "By assuming buying electricity from grid at 0.26 CHF/kWh and feeding in surplus energy to the grid at 0.04 CHF/kWh, this model focuses on showing factors that affect PV generation and energy cost."
         )
-
+        st.write(
+            "[Walch and Rüdisüli (2023)](https://www.sciencedirect.com/science/article/pii/S0306261923006268) "
+        )
         st.subheader("Baseline")
         st.write(
             """
